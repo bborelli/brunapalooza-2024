@@ -1,0 +1,255 @@
+:root {
+  --first-color: #66bfbf;
+  --second-color: #eaf6f6;
+  --third-color: #fcfefe;
+  --fourth-color: #f76b8a;
+  --text-color: #000;
+  --white: #fff;
+  --highlight-color: rgb(255, 148, 114);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(
+    68.4deg,
+    rgb(248, 182, 204) 0.5%,
+    rgb(192, 198, 230) 49%,
+    rgb(225, 246, 240) 99.8%
+  );
+  color: var(--text-color);
+}
+
+h1 {
+  text-align: center;
+  text-decoration: double;
+  color: var(--highlight-color);
+  text-decoration-thickness: 900;
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgb(255, 148, 114);
+}
+
+h2 {
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 30px 0;
+  color: var(--highlight-color);
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin: 20px 0;
+}
+
+p {
+  text-align: justify;
+  line-height: 1.5;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+label {
+  display: block;
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background: none;
+  padding: 0;
+  text-align: center;
+}
+
+.header p.initial-text {
+  font-size: 1em;
+}
+
+.header h1 {
+  background-color: var(--first-color);
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header h2 {
+  font-size: 2.5em;
+  color: var(--fourth-color);
+  margin-top: 10px;
+}
+
+.intro {
+  font-size: 1.3em;
+  margin-top: 10px;
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(
+    to right,
+    rgb(242, 112, 156),
+    var(--highlight-color)
+  );
+  display: block;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.gallery-section {
+  background-color: rgba(252, 254, 254, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+.gallery-section h2 {
+  color: var(--first-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(2);
+}
+
+.event-details {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f0e4e4;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 50px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.moments-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.moment {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.chill {
+  background-color: #c0c6e6;
+}
+
+.party {
+  background-color: #f8b6cc;
+}
+
+.moment h4 {
+  color: var(--fourth-color);
+  margin-bottom: 10px;
+}
+
+.rsvp-section,
+.locations-section {
+  background-color: rgba(247, 107, 138, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+}
+
+input,
+select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--third-color);
+  font-size: 1em;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.rsvp-btn {
+  background-color: var(--white);
+  color: var(--fourth-color);
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  width: 100%;
+  border: none;
+  margin-top: 10px;
+}
+
+.rsvp-btn:hover {
+  background-color: var(--second-color);
+}
+
+.map-btn {
+  background-color: var(--fourth-color);
+  color: var(--white);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.map-btn:hover {
+  background-color: var(--first-color);
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--first-color);
+  color: var(--white);
+  border-radius: 0 0 12px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
