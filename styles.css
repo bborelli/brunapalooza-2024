@@ -49,6 +49,20 @@ label {
   margin-bottom: 5px;
 }
 
+a {
+  color: var(--highlight-color); 
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--first-color); 
+  cursor: pointer
+}
+
+a:visited {
+  color: var(--highlight-color);
+}
+
 .full-width-background {
   width: 100%;
   background-color: var(--first-color);
