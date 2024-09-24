@@ -143,6 +143,10 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
   transform: scale(2);
 }
 
+.gallery-section p {
+  line-height: 1.2;
+}
+
 @media (hover: none) {
   .gallery-item img:hover {
     transform: none;
@@ -351,6 +355,10 @@ header.header {
 
   p, label, input, select, textarea {
     font-size: 0.9rem; 
+  }
+
+  .gallery-section p {
+    line-height: 1.1;
   }
 
   .first-image {
