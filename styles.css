@@ -315,6 +315,12 @@ header.header {
   text-align: center;
 }
 
+@media (max-width: 1024px) {
+  .gallery-section {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
 @media (max-width: 768px) {
   h1 {
     font-size: 2.5rem;
@@ -343,12 +349,17 @@ header.header {
   }
 
   .gallery-section {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    grid-template-columns: 1fr;
   }
 
-  .gallery {
-    grid-template-columns: 1fr; 
+  .gallery-section {
+    grid-template-columns: 1fr; /* 1 coluna em dispositivos móveis */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    object-fit: contain; 
+    transform: none; /* Remove o hover em telas menores 
   }
 
 
