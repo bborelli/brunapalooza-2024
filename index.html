@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,15 +14,17 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1>🎈 Brunapalooza 2024 🎈</h1>
+    <h1>🎈 Brunapalooza 2024 🎈</h1>
+    <div class="full-width-background">
       <p class="intro">
-        Let the countdown to the chaos begin 🎉! Pick your party vibe below! 👇
+        Buckle up, the fun (and a little chaos) is about to unfold! 🎉 🎉
       </p>
-
+    </div>
+    <div class="container">
       <img
         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/144/505/original/will-myers-MRJXnuc85jA-unsplash.jpg?1726929972"
         alt="A birthday cake with candles"
+        class="first-image"
       />
 
       <header class="header">
@@ -40,7 +42,12 @@
         </p>
       </header>
 
-      <h2>Gallery</h2>
+      <h2>
+        <small>
+          Since day one, birthdays have been Bruna's favorite! Let's take a trip
+          down memory lane... 👼
+        </small>
+      </h2>
       <section class="gallery-section">
         <div class="gallery-item">
           <img
@@ -142,6 +149,7 @@
           parts, so whether you're more outgoing 💃🏽 🕺🏽 or prefer a cozy vibe 🥰,
           there's a moment for you to enjoy and celebrate with me!
         </p>
+        <br />
 
         <div class="moments-grid">
           <div class="moment chill">
@@ -167,8 +175,8 @@
             <h4>Partying Hard Vibes</h4>
             <p>
               Only the strong will make it to
-              <a href="https://www.instagram.com/outracena_lisboa/?hl=pt">
-                Outra Cena</a
+              <a href="https://www.instagram.com/outracena_lisboa/?hl=pt"
+                >Outra Cena</a
               >! Unfortunately, The club only opens at 1 AM, so don't feel bad
               if you're not joining us. But for those who do, get ready for one
               of the best nights of your life 👯‍♀️. Located in Marvila, Outra Cena
@@ -188,8 +196,12 @@
       </section>
 
       <section class="rsvp-section">
-        <h2>RSVP</h2>
-        <form id="rsvp-form">
+        <h2>Pick your party vibe below! 👇</h2>
+        <form
+          id="rsvp-form"
+          action="https://formspree.io/f/xanwgjdk"
+          method="POST"
+        >
           <label for="name" class="sr-only">Full Name</label>
           <input
             type="text"
@@ -208,7 +220,19 @@
             <option value="none">Unfortunately, I can't make it 😞</option>
           </select>
 
-          <button type="submit" class="rsvp-btn">Submit RSVP</button>
+          <label for="message"
+            >Send a sprinkle of joy Bruna's way... because you know how much she
+            loves her birthday attention! 💌</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Leave your kind words here..."
+            rows="4"
+            cols="50"
+          ></textarea>
+
+          <button type="submit" class="rsvp-btn">Send</button>
         </form>
       </section>
 
@@ -219,29 +243,53 @@
         </button>
         <iframe
           id="chill-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.115689339233!2d-9.138653499999997!3d38.71515280000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a071e9df69%3A0x159f702e38f8ccfe!2scabal%3A%20cafe%20%26%20cocktail%20bar!5e0!3m2!1spt-PT!2spt!4v1727120824030!5m2!1spt-PT!2spt"
+          iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12452.462836064393!2d-9.148953234444281!3d38.71515234821326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a071e9df69%3A0x159f702e38f8ccfe!2scabal%3A%20cafe%20%26%20cocktail%20bar!5e0!3m2!1spt-PT!2spt!4v1727137673717!5m2!1spt-PT!2spt"
           width="600"
           height="450"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        >
+        </iframe>
 
         <button id="show-party-map" aria-expanded="false" class="map-btn">
           Show Outra Cena Map
         </button>
         <iframe
-          id="party-map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12447.78604387633!2d-9.110867534424823!3d38.741989648119095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1931843fd30b05%3A0x9c37daa57e9ed293!2sOutra%20Cena!5e0!3m2!1spt-PT!2spt!4v1727120769323!5m2!1spt-PT!2spt"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.9464912766184!2d-9.1005678!3d38.741990099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1931843fd30b05%3A0x9c37daa57e9ed293!2sOutra%20Cena!5e0!3m2!1spt-PT!2spt!4v1727137862632!5m2!1spt-PT!2spt"
           width="600"
           height="450"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+        >
+        </iframe>
       </section>
+    </div>
+
+    <div class="full-width-background">
+      <p class="intro"><strong>Countdown to Brunapalooza 2024 ⏰</strong></p>
+    </div>
+    <div class="countdown-timer">
+      <div class="time-unit">
+        <span class="number" id="days">00</span>
+        <span class="label">Days</span>
+      </div>
+      <div class="time-unit">
+        <span class="number" id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="time-unit">
+        <span class="number" id="minutes">00</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="time-unit">
+        <span class="number" id="seconds">00</span>
+        <span class="label">Seconds</span>
+      </div>
     </div>
 
     <footer>
