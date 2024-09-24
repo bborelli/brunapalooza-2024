@@ -140,7 +140,7 @@ label {
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; 
 }
 
 .time-unit {
@@ -153,28 +153,27 @@ label {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease;
+  text-align: center;
 }
 
-.time-unit:hover {
-  transform: scale(1.05);
-}
+@media (max-width: 600px) {
+  .countdown-timer {
+    flex-wrap: nowrap; 
+    gap: 10px; /
+  }
 
-.time-unit .number {
-  font-size: 2.5rem;
-  display: block;
-  transition: all 1s ease-in-out;
-}
+  .time-unit {
+    min-width: 60px; 
+    padding: 15px 10px; /
+  }
 
-.time-unit .label {
-  font-size: 1rem;
-  margin-top: 5px;
-  display: block;
-  color: #aaa;
-}
+  .time-unit .number {
+    font-size: 2rem; 
+  }
 
-.time-unit .number.flip {
-  transform: rotateX(360deg);
-  animation: flip 1s forwards;
+  .time-unit .label {
+    font-size: 0.8rem; 
+  }
 }
 
 @keyframes flip {
