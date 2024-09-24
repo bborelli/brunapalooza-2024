@@ -82,16 +82,19 @@ const rsvpForm = document.getElementById("rsvp-form");
 if (rsvpForm) {
   rsvpForm.setAttribute("action", "https://formspree.io/f/xanwgjdk");
 
- rsvpForm.addEventListener("submit", function (event) {
+// Removendo o 'required' para evitar a mensagem padrão do navegador
+document.getElementById("moments").removeAttribute("required");
+
+rsvpForm.addEventListener("submit", function (event) {
     const nameInput = document.getElementById("name").value.trim();
     const momentsInput = document.getElementById("moments").value;
 
     if (!nameInput.includes(" ") || nameInput.length <= 4) {
       event.preventDefault();
       alert(messages[language].nameAlert);
-    } else if (momentsInput === "") {  // Verifique se nenhum item foi selecionado
+    } else if (momentsInput === "") {  // Verifica se nenhum item foi selecionado
       event.preventDefault();
-      alert(messages[language].momentsAlert);  // Mensagem personalizada
+      alert(messages[language].momentsAlert);  // Exibe a mensagem personalizada
     }
 });
 } else {
