@@ -1,3 +1,11 @@
+document.getElementById("en").addEventListener("click", function() {
+    window.location.href = "index.html"; 
+});
+
+document.getElementById("pt").addEventListener("click", function() {
+    window.location.href = "index-pt.html"; 
+});
+
 function updateCountdown() {
   const now = new Date();
   const eventDate = new Date("2024-10-04T21:00:00+01:00").getTime();
