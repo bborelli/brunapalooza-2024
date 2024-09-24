@@ -3,13 +3,15 @@ const language = document.documentElement.lang === "pt-BR" ? "pt" : "en";
 
 
 const messages = {
-  en: {
+ en: {
     eventStarted: "The event has started! 🎉",
-    nameAlert: "Please enter your full name (first and last name) with at least 4 characters."
+    nameAlert: "Please enter your full name (first and last name) with at least 4 characters.",
+    momentsAlert: "Please select a party vibe!"
   },
   pt: {
     eventStarted: "O evento já começou! 🎉",
-    nameAlert: "Por favor, insira seu nome completo (primeiro e último nome) com pelo menos 4 caracteres."
+    nameAlert: "Por favor, insira seu nome completo (primeiro e último nome) com pelo menos 4 caracteres.",
+    momentsAlert: "Por favor, escolha uma vibe!"
   }
 };
 
@@ -93,6 +95,15 @@ if (rsvpForm) {
 } else {
   console.warn("RSVP form not found.");
 }
+
+rsvpForm.addEventListener("submit", function (event) {
+    const momentsInput = document.getElementById("moments").value;
+
+    if (!momentsInput) {
+        event.preventDefault();
+        alert(messages[language].momentsAlert);
+    }
+});
 
 
 document.getElementById("en").addEventListener("click", function() {
