@@ -482,6 +482,27 @@ header.header {
     gap: 5px; 
   }
 
+@keyframes flip {
+  0% {
+    transform: rotateX(0);
+  }
+  50% {
+    transform: rotateX(90deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+
+.number {
+  display: inline-block;
+  animation: flip 0.7s ease-out forwards;
+  transform-origin: bottom;
+}
+
+
 
 
 
