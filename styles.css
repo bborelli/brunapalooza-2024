@@ -48,7 +48,14 @@ p {
   font-size: 1em;
 }
 
-/* Seletor mais específico para garantir que os estilos sejam aplicados */
+/* Centralizar o container dos botões */
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0; /* Adiciona espaço acima e abaixo dos botões */
+}
+
+/* Estilos dos botões de idioma */
 button#en.lang-button, button#pt.lang-button {
   background-color: var(--first-color); /* Rosa vibrante */
   color: white;
@@ -59,22 +66,26 @@ button#en.lang-button, button#pt.lang-button {
   font-size: 16px;
   font-weight: bold;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-right: 10px;
+  margin: 0 10px; /* Espaçamento horizontal entre os botões */
 }
 
+/* Efeito hover */
 button#en.lang-button:hover, button#pt.lang-button:hover {
   background-color: var(--second-color); /* Tom mais claro de rosa */
-  transform: scale(1.05);
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
 }
 
+/* Efeito ao clicar */
 button#en.lang-button:active, button#pt.lang-button:active {
   background-color: var(--third-color); /* Rosa ainda mais claro */
 }
 
+/* Efeito de foco */
 button#en.lang-button:focus, button#pt.lang-button:focus {
   outline: none;
   box-shadow: 0 0 5px var(--third-color);
 }
+
 
 
 
