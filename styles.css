@@ -87,21 +87,21 @@ label {
 }
 
 button#en.lang-button, button#pt.lang-button {
-  background-color: var(--third-color);
+  background-color: rgba(255, 133, 133, 0.8);
   color: var(--white);
   border: 1px solid var(--white);
   border-radius: 8px;
+  opacity: 1
   padding: 10px 20px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: bold;
   margin: 0 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button#en.lang-button:hover, button#pt.lang-button:hover {
   background-color: var(--highlight-color);
-  color: var(--fourth-color);
+  color: #9cd3d3;
   transform: scale(1.1);
 }
 
