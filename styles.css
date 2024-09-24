@@ -126,7 +126,7 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
   border-radius: 12px;
   margin-bottom: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   justify-items: center;
 }
