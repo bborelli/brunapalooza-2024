@@ -90,21 +90,21 @@ label {
   display: flex;
   justify-content: center;
   margin: 20px 0;
+  gap: 10px;
 }
 
 button#en.lang-button, button#pt.lang-button {
   background-color: rgba(232, 100, 53, 0.5);
   color: var(--white);
   border-radius: 6px;
-  padding: 10px;
+  padding: 10px 20px; 
   border: none;
   text-align: center;
   cursor: pointer;
   font-size: 0.9em;
-  margin: 5px;
-  max-width: 100px;
   white-space: nowrap;
-  transition: background-color 0.3s ease, transform 0.2s ease
+  min-width: 120px; 
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button#en.lang-button:hover, button#pt.lang-button:hover {
