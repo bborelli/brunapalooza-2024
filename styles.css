@@ -93,7 +93,7 @@ label {
 }
 
 button#en.lang-button, button#pt.lang-button {
-  background-color: rgba(255, 133, 133, 0.8);
+  background-color: rgba(232, 100, 53, 0.5);
   color: var(--white);
   border-radius: 6px;
   padding: 8px 10px;
