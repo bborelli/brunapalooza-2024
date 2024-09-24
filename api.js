@@ -70,11 +70,11 @@ if (rsvpForm) {
     if (!nameInput.includes(" ") || nameInput.length <= 4) {
       event.preventDefault();
       alert(
-        "Por favor, insira seu nome completo (nome e sobrenome) com pelo menos 4 caracteres."
+        "Please enter your full name (first and last name) with at least 4 characters."
       );
     }
   });
 } else {
-  console.warn("Formulário RSVP não encontrado.");
+  console.warn("RSVP form not found.");
 }
 
