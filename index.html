@@ -3,8 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <button id="en">English</button>
-<button id="pt">Português</button>
     <title>🎈 Brunapalooza 2024 🎈</title>
 
     <link rel="stylesheet" href="styles.css" />
@@ -16,6 +14,8 @@
   </head>
 
   <body>
+     <button id="en">English</button>
+<button id="pt">Português</button>
     <h1>🎈 Brunapalooza 2024 🎈</h1>
     <div class="full-width-background">
       <p class="intro">
@@ -251,32 +251,37 @@
         <button id="show-chill-map" aria-expanded="false" class="map-btn">
           Show Cabal Map
         </button>
-        <iframe
-          id="chill-map"
-          iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12452.462836064393!2d-9.148953234444281!3d38.71515234821326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a071e9df69%3A0x159f702e38f8ccfe!2scabal%3A%20cafe%20%26%20cocktail%20bar!5e0!3m2!1spt-PT!2spt!4v1727137673717!5m2!1spt-PT!2spt"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
+        <section class="locations-section">
+  <h2>Locations</h2>
+  
+  <button id="show-chill-map" aria-expanded="false" class="map-btn">
+    Show Cabal Map
+  </button>
+  <iframe
+    id="chill-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12452.462836064393!2d-9.148953234444281!3d38.71515234821326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a071e9df69%3A0x159f702e38f8ccfe!2scabal%3A%20cafe%20%26%20cocktail%20bar!5e0!3m2!1spt-PT!2spt!4v1727137673717!5m2!1spt-PT!2spt"
+    width="600"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
 
-        <button id="show-party-map" aria-expanded="false" class="map-btn">
-          Show Outra Cena Map
-        </button>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.9464912766184!2d-9.1005678!3d38.741990099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1931843fd30b05%3A0x9c37daa57e9ed293!2sOutra%20Cena!5e0!3m2!1spt-PT!2spt!4v1727137862632!5m2!1spt-PT!2spt"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        >
-        </iframe>
+  <button id="show-party-map" aria-expanded="false" class="map-btn">
+    Show Outra Cena Map
+  </button>
+  <iframe
+    id="party-map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.9464912766184!2d-9.1005678!3d38.741990099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1931843fd30b05%3A0x9c37daa57e9ed293!2sOutra%20Cena!5e0!3m2!1spt-PT!2spt!4v1727137862632!5m2!1spt-PT!2spt"
+    width="600"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</section>
       </section>
     </div>
 
