@@ -54,6 +54,8 @@ function formatNumber(number) {
   return number < 10 ? `0${number}` : number;
 }
 
+}
+
 const countdownInterval = setInterval(updateCountdown, 1000);
 document.addEventListener("DOMContentLoaded", updateCountdown);
 
