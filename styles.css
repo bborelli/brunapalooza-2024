@@ -95,10 +95,9 @@ label {
 button#en.lang-button, button#pt.lang-button {
   background-color: rgba(255, 133, 133, 0.8);
   color: var(--white);
-  border: 1px solid var(--white);
   border-radius: 6px;
   opacity: 1
-  padding: 15px 30px;
+  padding: 20px 40px;
   cursor: pointer;
   font-size: 14px;
   margin: 0 10px;
@@ -221,7 +220,7 @@ textarea#message {
 }
 
 textarea::placeholder {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .map-btn {
@@ -235,11 +234,11 @@ button.rsvp-btn, button.map-btn {
    display: block;
   background-color: var(--third-color);
   color: var(--white);
-  padding: 12px 24px
+  padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
- font-size: 1em
-  width: 100%;
+ font-size: 0.9em;
+  max-width: 250px;
   border: none;
   margin: 20px auto;
   transition: background-color 0.3s ease;
@@ -277,6 +276,12 @@ footer a {
 
 footer a:hover {
   color: var(--first-color);
+}
+
+header.header {
+  padding: 0 20px; 
+  max-width: 1200px; 
+  margin: 0 auto;
 }
 
 .countdown-timer {
