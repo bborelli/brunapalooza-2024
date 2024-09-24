@@ -1,25 +1,24 @@
-
+// Definir o idioma com base no atributo lang do documento HTML
 const language = document.documentElement.lang === "pt-BR" ? "pt" : "en";
 
-
+// Mensagens para os dois idiomas
 const messages = {
- en: {
+  en: {
     eventStarted: "The event has started! 🎉",
     nameAlert: "Please enter your full name (first and last name) with at least 4 characters.",
-    momentsAlert: "Please select a party vibe!"
+    momentsAlert: "Please select a party vibe!",
   },
   pt: {
     eventStarted: "O evento já começou! 🎉",
     nameAlert: "Por favor, insira seu nome completo (primeiro e último nome) com pelo menos 4 caracteres.",
-    momentsAlert: "Por favor, escolha uma vibe!"
+    momentsAlert: "Por favor, escolha uma vibe!",
   }
 };
 
-
+// Função de contagem regressiva
 function updateCountdown() {
   const now = new Date();
-  const eventDate = new Date("2024-10-04T21:00:00+01:00").getTime(); // Fuso horário de Lisboa (UTC+1)
-
+  const eventDate = new Date("2024-10-04T21:00:00+01:00").getTime(); // Horário de Lisboa (UTC+1)
   const currentTime = now.getTime();
   const remainingTime = eventDate - currentTime;
 
@@ -41,13 +40,13 @@ function updateCountdown() {
 function updateNumber(id, value) {
   const element = document.getElementById(id);
   const formattedValue = formatNumber(value);
-
+  
   if (element && element.textContent !== formattedValue) {
-    element.style.animation = 'none'; 
+    element.style.animation = 'none';
     element.textContent = formattedValue;
     setTimeout(() => {
-      element.style.animation = ''; 
-    }, 10); 
+      element.style.animation = '';
+    }, 10);
   }
 }
 
@@ -55,12 +54,10 @@ function formatNumber(number) {
   return number < 10 ? `0${number}` : number;
 }
 
-
-
 const countdownInterval = setInterval(updateCountdown, 1000);
 document.addEventListener("DOMContentLoaded", updateCountdown);
 
-
+// Função para alternar o mapa
 function toggleMap(buttonId, mapId) {
   const button = document.getElementById(buttonId);
   const map = document.getElementById(mapId);
@@ -79,40 +76,35 @@ function toggleMap(buttonId, mapId) {
 toggleMap("show-chill-map", "chill-map");
 toggleMap("show-party-map", "party-map");
 
-
+// Validação do formulário RSVP
 const rsvpForm = document.getElementById("rsvp-form");
+
 if (rsvpForm) {
   rsvpForm.setAttribute("action", "https://formspree.io/f/xanwgjdk");
 
   rsvpForm.addEventListener("submit", function (event) {
     const nameInput = document.getElementById("name").value.trim();
+    const momentsInput = document.getElementById("moments").value;
 
     if (!nameInput.includes(" ") || nameInput.length <= 4) {
       event.preventDefault();
       alert(messages[language].nameAlert);
+    } else if (!momentsInput) {
+      event.preventDefault();
+      alert(messages[language].momentsAlert);
     }
   });
 } else {
   console.warn("RSVP form not found.");
 }
 
-rsvpForm.addEventListener("submit", function (event) {
-    const momentsInput = document.getElementById("moments").value;
-
-    if (momentsInput === "") { 
-        event.preventDefault();
-        alert(messages[language].momentsAlert);
-    }
-});
-
-
+// Alternar entre as versões de idiomas
 document.getElementById("en").addEventListener("click", function() {
-    window.location.href = "index.html"; 
+  window.location.href = "index.html"; // Versão em inglês
 });
 
 document.getElementById("pt").addEventListener("click", function() {
-    window.location.href = "index-pt.html"; 
+  window.location.href = "index-pt.html"; // Versão em português
 });
-
 
 
