@@ -48,6 +48,34 @@ p {
   font-size: 1em;
 }
 
+.lang-button {
+  background-color: var(--first-color); 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+}
+
+.lang-button:hover {
+  background-color: var(--second-color); 
+  transform: scale(1.05);
+}
+
+.lang-button:active {
+  background-color: var(--third-color); 
+}
+
+.lang-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px var(--third-color);
+}
+
+
 label {
   display: block;
   font-size: 1em;
