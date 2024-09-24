@@ -1,3 +1,50 @@
+function updateCountdown() {
+  const now = new Date();
+
+  const eventDate = new Date("2024-10-04T21:00:00+01:00").getTime();
+
+  const currentTime = now.getTime();
+  const remainingTime = eventDate - currentTime;
+
+  if (remainingTime < 0) {
+    document.getElementById("countdown").innerHTML =
+      "<h2>O evento já começou! 🎉</h2>";
+    clearInterval(countdownInterval);
+    return;
+  }
+
+  const seconds = Math.floor((remainingTime / 1000) % 60);
+  const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
+  const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+
+  updateNumber("days", days);
+  updateNumber("hours", hours);
+  updateNumber("minutes", minutes);
+  updateNumber("seconds", seconds);
+}
+
+function updateNumber(id, value) {
+  const element = document.getElementById(id);
+  const formattedValue = formatNumber(value);
+
+  if (element.textContent !== formattedValue) {
+    element.classList.add("flip");
+    setTimeout(() => {
+      element.textContent = formattedValue;
+      element.classList.remove("flip");
+    }, 500);
+  }
+}
+
+function formatNumber(number) {
+  return number < 10 ? `0${number}` : number;
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+document.addEventListener("DOMContentLoaded", updateCountdown);
+
 function toggleMap(buttonId, mapId) {
   const button = document.getElementById(buttonId);
   const map = document.getElementById(mapId);
@@ -26,10 +73,11 @@ if (rsvpForm) {
     if (!nameInput.includes(" ") || nameInput.length <= 4) {
       event.preventDefault();
       alert(
-        "Please enter your full name (first and last name) with at least 4 characters."
+        "Por favor, insira seu nome completo (nome e sobrenome) com pelo menos 4 caracteres."
       );
     }
   });
 } else {
   console.warn("Formulário RSVP não encontrado.");
 }
+
