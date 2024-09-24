@@ -73,8 +73,9 @@ label {
 .full-width-background p {
   margin: 0;
   text-align: center;
-  color: var(--white);
+  color: #2b4353;
   font-size: 1.3em;
+  font-weight: bold;
 }
 
 .countdown-background {
