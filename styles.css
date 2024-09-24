@@ -240,10 +240,47 @@ label {
   }
 }
 
+@media (max-width: 768px) {
+  .gallery-section {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto; 
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px; 
+  }
+
+  .header h1 {
+    font-size: 2rem; 
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rsvp-btn, .map-btn {
+    font-size: 0.9rem; 
+    padding: 10px; 
+    width: 100%;
+  }
+
+  p, label, textarea {
+    font-size: 0.9rem; 
+  }
 }
 
 .header {
@@ -300,6 +337,12 @@ label {
 
 .gallery-item img:hover {
   transform: scale(2);
+}
+
+@media (hover: none) {
+  .gallery-item img:hover {
+    transform: none; /
+  }
 }
 
 .event-details {
@@ -408,17 +451,16 @@ textarea {
   max-width: 300px;
 }
 
-/* Efeito hover */
 .map-btn:hover {
   background-color: var(
     --second-color
-  ); /* Muda para uma cor mais vibrante no hover */
-  color: var(--white); /* Mantém contraste no texto */
+  ); 
+  color: var(--white); 
 }
 
 .locations-section {
-  background-color: var(--fourth-color); /* Fundo da seção */
-  color: var(--first-color); /* Cor do texto */
+  background-color: var(--fourth-color); 
+  color: var(--first-color); 
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -441,6 +483,13 @@ iframe {
 @media (max-width: 480px) {
   iframe {
     height: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .countdown-timer {
+    flex-direction: column; 
+    gap: 10px; 
   }
 }
 
