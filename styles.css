@@ -294,8 +294,7 @@ header.header {
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
-  margin-bottom: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .time-unit {
@@ -384,6 +383,24 @@ header.header {
   iframe {
     height: 200px;
     margin-top: 10px;
+  }
+}
+
+  .time-unit {
+    min-width: 60px; 
+    padding: 10px 5px; 
+  }
+
+  .time-unit .number {
+    font-size: 1.2em; 
+  }
+
+  .time-unit .label {
+    font-size: 0.8em; 
+  }
+
+  .countdown-timer {
+    gap: 5px; 
   }
 }
 
