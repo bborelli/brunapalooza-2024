@@ -13,6 +13,7 @@ function updateCountdown() {
   const currentTime = now.getTime();
   const remainingTime = eventDate - currentTime;
 
+  // Verifica se o evento já começou
   if (remainingTime < 0) {
     document.getElementById("countdown").innerHTML = "<h2>O evento já começou! 🎉</h2>";
     clearInterval(countdownInterval);
@@ -32,7 +33,7 @@ function updateNumber(id, value) {
   const element = document.getElementById(id);
   const formattedValue = formatNumber(value);
 
-  if (element.textContent !== formattedValue) {
+  if (element && element.textContent !== formattedValue) {
     element.classList.add("flip");
     setTimeout(() => {
       element.textContent = formattedValue;
@@ -46,10 +47,9 @@ function formatNumber(number) {
 }
 
 const countdownInterval = setInterval(updateCountdown, 1000);
-
 document.addEventListener("DOMContentLoaded", updateCountdown);
 
-
+// Função para alternar a visibilidade dos mapas
 function toggleMap(buttonId, mapId) {
   const button = document.getElementById(buttonId);
   const map = document.getElementById(mapId);
@@ -68,6 +68,7 @@ function toggleMap(buttonId, mapId) {
 toggleMap("show-chill-map", "chill-map");
 toggleMap("show-party-map", "party-map");
 
+// Validação do formulário de RSVP
 const rsvpForm = document.getElementById("rsvp-form");
 if (rsvpForm) {
   rsvpForm.setAttribute("action", "https://formspree.io/f/xanwgjdk");
@@ -85,4 +86,5 @@ if (rsvpForm) {
 } else {
   console.warn("RSVP form not found.");
 }
+
 
