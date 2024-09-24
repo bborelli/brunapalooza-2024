@@ -29,7 +29,7 @@ function updateNumber(id, value) {
     setTimeout(() => {
       element.textContent = formattedValue;
       element.classList.remove("flip");
-    }, 500);
+    }, 500); // Sincroniza com a duração da animação (0.5s)
   }
 }
 
