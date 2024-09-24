@@ -24,7 +24,7 @@ h1, h2 {
 h1 {
   text-decoration: double;
   color: var(--highlight-color);
-  font-size: 36 px;
+  font-size: 36px;
   font-weight: bold;
   text-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
 }
@@ -39,7 +39,7 @@ h2 {
 p {
   text-align: justify;
   line-height: 1.5;
-  margin-top: 18 px;
+  margin-top: 18px;
   font-size: 1em;
 }
 
@@ -67,7 +67,7 @@ label {
 
 .full-width-background p.intro {
   margin: 0 auto;
-  padding: 0 20px; 
+  padding: 0 20px;
   max-width: 1200px;
 }
 
@@ -76,7 +76,7 @@ label {
   max-width: 600px;
   height: auto;
   display: block;
-  margin: 30px auto ;
+  margin: 30px auto;
   border-radius: 4px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
@@ -96,7 +96,6 @@ button#en.lang-button, button#pt.lang-button {
   background-color: rgba(255, 133, 133, 0.8);
   color: var(--white);
   border-radius: 6px;
-  opacity: 1
   padding: 20px 40px;
   cursor: pointer;
   font-size: 14px;
@@ -149,7 +148,6 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
 }
 
 .event-details {
-  font-family: "Poppins", Arial, sans-serif;
   background-color: var(--second-color);
   padding: 20px;
   border-radius: 8px;
@@ -216,7 +214,7 @@ textarea {
 }
 
 textarea#message {
-  height: 100px
+  height: 100px;
 }
 
 textarea::placeholder {
@@ -224,26 +222,25 @@ textarea::placeholder {
 }
 
 .map-btn {
-  padding: 8px 10px; 
-  font-size: 0.9em; 
-  border-radius: 6px; 
-  max-width: 250px; 
+  padding: 8px 10px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  max-width: 250px;
 }
 
 button.rsvp-btn, button.map-btn {
-   display: block;
+  display: block;
   background-color: var(--third-color);
   color: var(--white);
   padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
- font-size: 0.9em;
+  font-size: 0.9em;
   max-width: 250px;
   border: none;
   margin: 20px auto;
   transition: background-color 0.3s ease;
 }
-
 
 button.rsvp-btn:hover, button.map-btn:hover {
   background-color: var(--highlight-color);
@@ -271,7 +268,6 @@ footer a {
   color: var(--highlight-color);
   text-decoration: none;
   transition: color 0.3s ease;
-  text-align: center;
 }
 
 footer a:hover {
@@ -279,8 +275,8 @@ footer a:hover {
 }
 
 header.header {
-  padding: 0 20px; 
-  max-width: 1200px; 
+  padding: 0 20px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -348,9 +344,10 @@ header.header {
 
   iframe {
     height: 200px;
-    margin-top: 10px
+    margin-top: 10px;
   }
 }
+
 
 
 
