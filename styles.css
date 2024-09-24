@@ -325,6 +325,11 @@ header.header {
   .gallery-section {
     grid-template-columns: repeat(3, 1fr); 
   }
+  .gallery-item img {
+    width: 100%;
+    height: auto;  
+    object-fit: cover;  
+}
 }
 
 @media (max-width: 768px) {
@@ -364,8 +369,9 @@ header.header {
 
   .gallery-item img {
     width: 100%;
-    object-fit: contain; 
-    transform: none; /* Remove o hover em telas menores 
+    object-fit: cover; 
+    height: auto;
+    transform: none; 
   }
 
 
@@ -399,6 +405,13 @@ header.header {
    .gallery {
     grid-template-columns: 1fr; 
   }
+
+  .gallery-item img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+  }
+}
 
   .moment h4 {
     font-size: 1.2rem;
