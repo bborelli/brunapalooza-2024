@@ -1,10 +1,18 @@
-document.getElementById("en").addEventListener("click", function() {
-    window.location.href = "index.html"; 
-});
 
-document.getElementById("pt").addEventListener("click", function() {
-    window.location.href = "index-pt.html"; 
-});
+const language = document.documentElement.lang === "pt-BR" ? "pt" : "en";
+
+
+const messages = {
+  en: {
+    eventStarted: "The event has started! 🎉",
+    nameAlert: "Please enter your full name (first and last name) with at least 4 characters."
+  },
+  pt: {
+    eventStarted: "O evento já começou! 🎉",
+    nameAlert: "Por favor, insira seu nome completo (primeiro e último nome) com pelo menos 4 caracteres."
+  }
+};
+
 
 function updateCountdown() {
   const now = new Date();
@@ -13,9 +21,9 @@ function updateCountdown() {
   const currentTime = now.getTime();
   const remainingTime = eventDate - currentTime;
 
-  // Verifica se o evento já começou
+
   if (remainingTime < 0) {
-    document.getElementById("countdown").innerHTML = "<h2>O evento já começou! 🎉</h2>";
+    document.getElementById("countdown").innerHTML = `<h2>${messages[language].eventStarted}</h2>`;
     clearInterval(countdownInterval);
     return;
   }
@@ -49,7 +57,7 @@ function formatNumber(number) {
 const countdownInterval = setInterval(updateCountdown, 1000);
 document.addEventListener("DOMContentLoaded", updateCountdown);
 
-// Função para alternar a visibilidade dos mapas
+
 function toggleMap(buttonId, mapId) {
   const button = document.getElementById(buttonId);
   const map = document.getElementById(mapId);
@@ -68,7 +76,7 @@ function toggleMap(buttonId, mapId) {
 toggleMap("show-chill-map", "chill-map");
 toggleMap("show-party-map", "party-map");
 
-// Validação do formulário de RSVP
+
 const rsvpForm = document.getElementById("rsvp-form");
 if (rsvpForm) {
   rsvpForm.setAttribute("action", "https://formspree.io/f/xanwgjdk");
@@ -78,13 +86,21 @@ if (rsvpForm) {
 
     if (!nameInput.includes(" ") || nameInput.length <= 4) {
       event.preventDefault();
-      alert(
-        "Please enter your full name (first and last name) with at least 4 characters."
-      );
+      alert(messages[language].nameAlert);
     }
   });
 } else {
   console.warn("RSVP form not found.");
 }
+
+
+document.getElementById("en").addEventListener("click", function() {
+    window.location.href = "index.html"; 
+});
+
+document.getElementById("pt").addEventListener("click", function() {
+    window.location.href = "index-pt.html"; 
+});
+
 
 
