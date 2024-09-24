@@ -195,6 +195,7 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
   color: var(--fourth-color);
   margin-bottom: 10px;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .rsvp-section,
@@ -359,6 +360,10 @@ header.header {
 
   .gallery-section p {
     line-height: 1.1;
+  }
+
+  .moment h4 {
+    font-size: 1.2rem;
   }
 
   .first-image {
