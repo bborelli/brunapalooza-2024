@@ -55,11 +55,17 @@ p {
   margin: 20px 0; /* Adiciona espaço acima e abaixo dos botões */
 }
 
+/* Efeito hover mais evidente */
+button#en.lang-button:hover, button#pt.lang-button:hover {
+  background-color: var(--highlight-color); /* Mudando para um tom diferente no hover */
+  color: var(--fourth-color); /* Texto escuro no hover */
+}
+
 /* Estilos dos botões de idioma */
 button#en.lang-button, button#pt.lang-button {
-  background-color: var(--first-color); /* Rosa vibrante */
-  color: white;
-  border: none;
+  background-color: var(--third-color); 
+  color: var(--white);
+  border: 2px solid var(--fourth-color)
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
@@ -71,8 +77,9 @@ button#en.lang-button, button#pt.lang-button {
 
 /* Efeito hover */
 button#en.lang-button:hover, button#pt.lang-button:hover {
-  background-color: var(--second-color); /* Tom mais claro de rosa */
-  transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  background-color: var(--highlight-color); 
+color: var(--fourth-color); 
+  transform: scale(1.1); 
 }
 
 /* Efeito ao clicar */
@@ -287,7 +294,9 @@ label {
 
   .gallery-section {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
+  margin-top: 40px; /* Aumentando o espaçamento superior */
+  margin-bottom: 40px; /* Aumentando o espaçamento inferior */
+}
 
   .gallery-item img {
     width: 100%;
@@ -394,6 +403,10 @@ label {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+.event-details p {
+  font-size: 1.1em; 
+  line-height: 1.7; 
+
 .moments-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -475,6 +488,10 @@ textarea {
   resize: vertical;
 }
 
+  textarea::placeholder {
+  white-space: nowrap; 
+}
+
 .map-btn {
   background-color: var(--third-color);
   color: var(--fourth-color);
@@ -523,6 +540,7 @@ footer {
   box-sizing: border-box;
   margin-top: 30px;
   font-size: 1em;
+  text-align: center; 
 }
 
 footer a {
@@ -533,5 +551,34 @@ footer a {
 
 footer a:hover {
   color: var(--first-color);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Diminuindo o tamanho do H1 */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Ajustando o H2 */
+  }
+
+  h3, h4 {
+    font-size: 1.5rem; /* Ajustando H3 e H4 */
+  }
+
+  h5, h6 {
+    font-size: 1.2rem; /* Ajustando H5 e H6, se houver */
+  }
+}
+  @media (max-width: 768px) {
+  .countdown-timer {
+    flex-wrap: nowrap; /* Impede que as caixas quebrem de linha */
+    gap: 10px; /* Ajusta o espaçamento entre as caixas */
+  }
+
+  .time-unit {
+    min-width: 60px; /* Reduz o tamanho mínimo das caixas */
+    padding: 15px 10px; /* Ajusta o preenchimento interno */
+  }
 }
 
