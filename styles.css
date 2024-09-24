@@ -149,6 +149,10 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
   line-height: 1;
 }
 
+.party h4 {
+  color: var(--white);
+}
+
 @media (hover: none) {
   .gallery-item img:hover {
     transform: none;
