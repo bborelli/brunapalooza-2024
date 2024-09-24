@@ -96,12 +96,13 @@ button#en.lang-button, button#pt.lang-button {
   background-color: rgba(255, 133, 133, 0.8);
   color: var(--white);
   border-radius: 6px;
-  padding: 15px 30px;
+  padding: 8px 10px;
   border: none;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9em;
   margin: 0 10px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  max-width: 250px;
+  transition: background-color 0.3s ease, transform 0.2s ease
 }
 
 button#en.lang-button:hover, button#pt.lang-button:hover {
@@ -233,7 +234,7 @@ button.rsvp-btn, button.map-btn {
   display: block;
   background-color: var(--third-color);
   color: var(--white);
-  padding: 10px 12px;
+  padding: 8px 10px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.9em;
@@ -263,7 +264,7 @@ footer {
   color: var(--white);
   border-radius: 0 0 12px 12px;
   margin-top: 30px;
-  font-size: 1em;
+  font-size: 0.9em;
 }
 
 footer a {
