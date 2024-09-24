@@ -99,9 +99,7 @@ label {
   font-weight: 600;
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-
   text-align: center;
-
   margin-bottom: 30px;
 }
 
@@ -220,37 +218,6 @@ label {
   }
 }
 
-@media (max-width: 1024px) {
-  .first-image {
-    max-width: 700px;
-  }
-}
-
-@media (max-width: 768px) {
-  .first-image {
-    max-width: 100%;
-    margin: 15px auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .first-image {
-    max-width: 100%;
-    margin: 10px auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-section {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-  }
-
-  .gallery-item img {
-    width: 100%;
-    height: auto; 
-  }
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -259,27 +226,56 @@ label {
 
 @media (max-width: 768px) {
   .container {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .header h1 {
-    font-size: 2rem; 
+    font-size: 2rem;
   }
 
   h2 {
     font-size: 1.5rem;
   }
+
+  .first-image {
+    max-width: 100%;
+    margin: 15px auto;
+  }
+
+  .gallery-section {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-image {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+
+  iframe {
+    height: 200px;
+  }
 }
 
 @media (max-width: 600px) {
   .rsvp-btn, .map-btn {
-    font-size: 0.9rem; 
-    padding: 10px; 
+    font-size: 0.9rem;
+    padding: 10px;
     width: 100%;
   }
 
   p, label, textarea {
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
   }
 }
 
@@ -341,7 +337,7 @@ label {
 
 @media (hover: none) {
   .gallery-item img:hover {
-    transform: none; /
+    transform: none;
   }
 }
 
@@ -433,12 +429,12 @@ textarea {
   font-size: 1em;
   margin-bottom: 15px;
   box-sizing: border-box;
-  resize: vertical; /* Permite que o usuário ajuste a altura do campo */
+  resize: vertical;
 }
 
 .map-btn {
-  background-color: var(--third-color); /* Botão de fundo suave */
-  color: var(--fourth-color); /* Texto com um tom mais claro */
+  background-color: var(--third-color);
+  color: var(--fourth-color);
   border: none;
   padding: 12px;
   border-radius: 8px;
@@ -452,15 +448,13 @@ textarea {
 }
 
 .map-btn:hover {
-  background-color: var(
-    --second-color
-  ); 
-  color: var(--white); 
+  background-color: var(--second-color);
+  color: var(--white);
 }
 
 .locations-section {
-  background-color: var(--fourth-color); 
-  color: var(--first-color); 
+  background-color: var(--fourth-color);
+  color: var(--first-color);
   padding: 20px;
   border-radius: 12px;
   text-align: center;
@@ -472,25 +466,6 @@ iframe {
   border: none;
   border-radius: 8px;
   margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-  iframe {
-    height: 250px;
-  }
-}
-
-@media (max-width: 480px) {
-  iframe {
-    height: 200px;
-  }
-}
-
-@media (max-width: 600px) {
-  .countdown-timer {
-    flex-direction: column; 
-    gap: 10px; 
-  }
 }
 
 footer {
@@ -516,3 +491,4 @@ footer a {
 footer a:hover {
   color: var(--first-color);
 }
+
