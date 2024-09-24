@@ -337,9 +337,30 @@ header.header {
 }
 
 @media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; 
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p, label, input, select, textarea {
+    font-size: 0.9rem; 
+  }
+
   .first-image {
     max-width: 100%;
     margin: 10px auto;
+  }
+
+  .rsvp-section,
+  .locations-section {
+    padding: 15px; 
+  }
+
+  textarea#message {
+    height: auto;
   }
 
   iframe {
@@ -347,7 +368,6 @@ header.header {
     margin-top: 10px;
   }
 }
-
 
 
 
