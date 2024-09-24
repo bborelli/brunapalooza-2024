@@ -42,11 +42,11 @@ function updateNumber(id, value) {
   const formattedValue = formatNumber(value);
 
   if (element && element.textContent !== formattedValue) {
-    element.classList.add("flip");
+  element.textContent = formattedValue;
+    element.style.animation = 'none'; 
     setTimeout(() => {
-      element.textContent = formattedValue;
-      element.classList.remove("flip");
-    }, 500); // Sincroniza com a duração da animação (0.5s)
+      element.style.animation = ''; 
+    }, 10); 
   }
 }
 
