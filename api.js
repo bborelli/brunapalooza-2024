@@ -1,19 +1,16 @@
 function updateCountdown() {
   const now = new Date();
-
   const eventDate = new Date("2024-10-04T21:00:00+01:00").getTime();
 
   const currentTime = now.getTime();
   const remainingTime = eventDate - currentTime;
 
   if (remainingTime < 0) {
-    document.getElementById("countdown").innerHTML =
-      "<h2>O evento já começou! 🎉</h2>";
+    document.getElementById("countdown").innerHTML = "<h2>O evento já começou! 🎉</h2>";
     clearInterval(countdownInterval);
     return;
   }
 
-  const seconds = Math.floor((remainingTime / 1000) % 60);
   const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
   const hours = Math.floor((remainingTime / (1000 * 60 * 60)) % 24);
   const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
@@ -21,7 +18,6 @@ function updateCountdown() {
   updateNumber("days", days);
   updateNumber("hours", hours);
   updateNumber("minutes", minutes);
-  updateNumber("seconds", seconds);
 }
 
 function updateNumber(id, value) {
@@ -44,6 +40,7 @@ function formatNumber(number) {
 const countdownInterval = setInterval(updateCountdown, 1000);
 
 document.addEventListener("DOMContentLoaded", updateCountdown);
+
 
 function toggleMap(buttonId, mapId) {
   const button = document.getElementById(buttonId);
