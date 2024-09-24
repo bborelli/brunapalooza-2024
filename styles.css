@@ -263,14 +263,14 @@ iframe {
 }
 
 footer {
-  display: block;
+  display: flex;
   text-align: center;
+  justify-content: center;
+align-items: center;
   padding: 15px 0;
   background-color: var(--fourth-color);
   color: var(--white);
   font-size: 0.9em;
-  width: 100%;
-  box-sizing: border-box;
 }
 
 .footer-content {
