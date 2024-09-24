@@ -347,6 +347,11 @@ header.header {
     margin-bottom: 40px;
   }
 
+  .gallery {
+    grid-template-columns: 1fr; 
+  }
+
+
   .first-image {
     max-width: 100%;
     margin: 15px auto;
@@ -372,6 +377,10 @@ header.header {
 
   .gallery-section p {
     line-height: 1;
+  }
+
+   .gallery {
+    grid-template-columns: 1fr; 
   }
 
   .moment h4 {
