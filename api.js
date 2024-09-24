@@ -99,7 +99,7 @@ if (rsvpForm) {
 rsvpForm.addEventListener("submit", function (event) {
     const momentsInput = document.getElementById("moments").value;
 
-    if (!momentsInput) {
+    if (momentsInput === "") { 
         event.preventDefault();
         alert(messages[language].momentsAlert);
     }
