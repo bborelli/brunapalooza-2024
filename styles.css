@@ -153,11 +153,6 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
   color: var(--white);
 }
 
-@media (hover: none) {
-  .gallery-item img:hover {
-    transform: none;
-  }
-}
 
 .event-details {
   background-color: var(--second-color);
@@ -280,6 +275,7 @@ footer {
 }
 
 .footer-content {
+  text-align: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px; /
@@ -317,6 +313,12 @@ header.header {
   min-width: 80px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+@media (hover: none) {
+  .gallery-item img:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 1024px) {
