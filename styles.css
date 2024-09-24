@@ -65,6 +65,12 @@ label {
   font-weight: bold;
 }
 
+.full-width-background p.intro {
+  margin: 0 auto;
+  padding: 0 20px; 
+  max-width: 1200px;
+}
+
 .first-image {
   width: 100%;
   max-width: 600px;
@@ -90,9 +96,9 @@ button#en.lang-button, button#pt.lang-button {
   background-color: rgba(255, 133, 133, 0.8);
   color: var(--white);
   border: 1px solid var(--white);
-  border-radius: 8px;
+  border-radius: 6px;
   opacity: 1
-  padding: 10px 20px;
+  padding: 15px 30px;
   cursor: pointer;
   font-size: 14px;
   margin: 0 10px;
@@ -185,6 +191,7 @@ button#en.lang-button:focus, button#pt.lang-button:focus {
 .moment h4 {
   color: var(--fourth-color);
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .rsvp-section,
@@ -209,6 +216,10 @@ textarea {
   box-sizing: border-box;
 }
 
+textarea#message {
+  height: 100px
+}
+
 textarea::placeholder {
   white-space: nowrap;
 }
@@ -221,18 +232,19 @@ textarea::placeholder {
 }
 
 button.rsvp-btn, button.map-btn {
+   display: block;
   background-color: var(--third-color);
   color: var(--white);
-  padding: 8px 12px;
+  padding: 12px 24px
   border-radius: 6px;
   cursor: pointer;
- font-size: 0.9em
+ font-size: 1em
   width: 100%;
   border: none;
-  margin-top: 10px;
-  margin-botton: 10px;
+  margin: 20px auto;
   transition: background-color 0.3s ease;
 }
+
 
 button.rsvp-btn:hover, button.map-btn:hover {
   background-color: var(--highlight-color);
@@ -331,6 +343,7 @@ footer a:hover {
 
   iframe {
     height: 200px;
+    margin-top: 10px
   }
 }
 
