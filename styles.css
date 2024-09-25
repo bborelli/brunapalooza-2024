@@ -104,7 +104,7 @@ a:visited {
 }
 
 button#en.lang-button, button#pt.lang-button {
-  background-color: #9CD3D3
+  background-color: #9CD3D3;
   color: var(--white);
   border-radius: 6px;
   padding: 5px 10px; 
@@ -124,7 +124,7 @@ button#en.lang-button:hover, button#pt.lang-button:hover {
 }
 
 button#en.lang-button:active, button#pt.lang-button:active {
-  background-color: var(--third-color);
+  background-color: #2b4353;
 }
 
 button#en.lang-button:focus, button#pt.lang-button:focus {
